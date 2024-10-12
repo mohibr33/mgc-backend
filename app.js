@@ -3,8 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
-const authController = require('./controllers/authcontroller');
-const blogController = require('./controllers/blogcontroller');
+const authController = require('./controller/authcontroller');
+const blogController = require('./controller/blogcontroller');
 const authenticateToken = require('./middleware/authMiddleware');
 
 const app = express();

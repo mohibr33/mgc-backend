@@ -12,7 +12,7 @@ const login = (req, res) => {
                 const token = jwt.sign({ id: admin.id, username: admin.username }, 'your_jwt_secret', { expiresIn: '1h' });
                 return res.json({ token, message: 'Login successful' });
             } else {
-                return res.status(401).json({ message: 'Invalid username or password' });
+                return res.status(401).json({ message: 'Invalid email or password' });
             }
         })
         .catch(err => {
